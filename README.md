@@ -48,7 +48,7 @@ Link to Repository [https://github.com/julianest/Block-master](https://github.co
 
 ### Deployment
 
-This section has moved here: [https://block-master-8e74d.web.app/](https://block-master-8e74d.web.app/)
+This section has moved here: [https://workshop-ec4fe.web.app/](https://workshop-ec4fe.web.app/)
 
 ### Kanban
 
