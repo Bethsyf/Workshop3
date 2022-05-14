@@ -9,12 +9,12 @@ import { FacebookAuthProvider } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECTID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
-  appId: process.env.REACT_APP_FIREBASE_APPID
+  apiKey: "AIzaSyBrwVXcfNgQDmUqs0ZUoKCsL7eL_enahKg",
+  authDomain: "workshop-ec4fe.firebaseapp.com",
+  projectId: "workshop-ec4fe",
+  storageBucket: "workshop-ec4fe.appspot.com",
+  messagingSenderId: "836964541230",
+  appId: "1:836964541230:web:d75a4b9d604da0deabd0bf"
 };
 
 // Initialize Firebase
