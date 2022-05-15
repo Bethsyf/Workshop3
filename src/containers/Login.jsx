@@ -60,15 +60,13 @@ const Login = () => {
               </Form.Group>
 
 
-              <div className="buttons-login">
-                <Button variant="primary" type="submit" style={{ margin: "5% 0% 2.5% 0%" }}>
+              <div >
+                <Button class="btn btn-primary btn-lg btn-block" type="submit" style={{ margin: "5% 0% 2.5% 0%" }}>
                   Login
-                </Button>
-                <div className="google-btn" onClick={() => dispatch(loginGoogle())}>
-                  <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />
-                </div>
+                </Button>                
               </div>
-              <Button onClick={() => dispatch(loginFacebookAction())}>Inicio con Facebook</Button>
+              <Button className="btn btn-lg btn-danger m-3" onClick={() => dispatch(loginGoogle())}>Inicio con Google</Button>
+              <Button className="btn btn-lg btn-primary " onClick={() => dispatch(loginFacebookAction())}>Inicio con Facebook</Button>
             </Form>
 
           </Container>
@@ -81,7 +79,7 @@ const Login = () => {
 
         {/* // {usuarioValido && } */}
 
-        <Link to="/register" style={{ display: "flex", color: "white", textAlign: "center", justifyContent: "center", margin: "5% 0% 5% 0%" }}>Si no tienes una cuenta puedes registrarte</Link>
+        <Link to="/register" style={{ display: "flex", textAlign: "center", justifyContent: "center", margin: "5% 0% 5% 0%" }}>Si no tienes una cuenta puedes registrarte</Link>
       </Container>
     </>
   );
