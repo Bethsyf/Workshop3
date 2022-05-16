@@ -59,8 +59,6 @@ const Login = () => {
                 <Form.Label>Contraseña</Form.Label>
                 <Form.Control type="password" placeholder="Password" name="password" onChange={handleInput} />
               </Form.Group>
-
-
               <div >
                 <Button class="btn btn-primary btn-lg btn-block" type="submit" style={{ margin: "5% 0% 2.5% 0%" }}>
                   Login

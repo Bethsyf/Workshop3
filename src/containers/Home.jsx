@@ -1,6 +1,7 @@
 import React from "react";
 import Add from "../components/Add";
 import List from "../components/List";
+import FooterP from "../components/Footer"
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <div>
         <Add/>
         <List/>
+        <FooterP/>
       </div>
     </>
   );
