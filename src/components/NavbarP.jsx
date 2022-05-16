@@ -15,11 +15,11 @@ const NavbarP = () => {
 
   return (
     <>
-      <Navbar bg="dark" expand="md" >
+      <Navbar bg="light" variant="light" expand="md" >
         <Container fluid>
           <Navbar.Brand href="#">
             <img src="" alt="Logo" /></Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" style={{ backgroundColor: "white" }} />
+          <Navbar.Toggle aria-controls="navbarScroll"/>
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0 navLinks"
