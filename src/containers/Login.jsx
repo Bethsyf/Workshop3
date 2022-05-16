@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { Button, Form, Container } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
@@ -42,46 +42,41 @@ const Login = () => {
 
   return (
     <>
-
-      <Container>
-        
+      <section style={{
+        'height': '100vh',
+        'display': 'flex',
+        'justifyContent': 'center',
+        'alignItems': 'center'
+      }}>
         {!usuarioValido ?
           <Container>
-            <h1>Ingresa</h1>
-
-            <Form onSubmit={handleSubmit} >
+            <h1 style={{ 'fontFamily': '', 'fontSize': '44px', 'fontWeight': '700' }}>Style your
+              <span className='d-block'>clothes</span>
+            </h1>
+            <Form onSubmit={handleSubmit} className='mt-5'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Correo Electronico</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" name="correo" onChange={handleInput} />
-
+                {/* <Form.Label>Correo Electronico</Form.Label> */}
+                <Form.Control className='py-2' type="email" placeholder="Email" name="correo" onChange={handleInput} />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Contraseña</Form.Label>
-                <Form.Control type="password" placeholder="Password" name="password" onChange={handleInput} />
+                {/* <Form.Label>Contraseña</Form.Label> */}
+                <Form.Control className='py-2' type="password" placeholder="Password" name="password" onChange={handleInput} />
               </Form.Group>
-
-
-              <div >
-                <Button class="btn btn-primary btn-lg btn-block" type="submit" style={{ margin: "5% 0% 2.5% 0%" }}>
-                  Login
-                </Button>                
-              </div>
-              <Button className="btn btn-lg btn-danger m-3" onClick={() => dispatch(loginGoogle())}>Inicio con Google</Button>
-              <Button className="btn btn-lg btn-primary " onClick={() => dispatch(loginFacebookAction())}>Inicio con Facebook</Button>
+              <Button variant="dark" type="submit" className="w-100 mt-5 mb-2">
+                Login
+              </Button>
+              <Button variant="danger" className="w-100 mb-2" onClick={() => dispatch(loginGoogle())}>Inicio con Google</Button>
+              <Button variant='primary' className='w-100 mb-2' onClick={() => dispatch(loginFacebookAction())}>Inicio con Facebook</Button>
             </Form>
-
+            <div className="d-flex justify-content-center">
+              <Link to="/register">Si no tienes una cuenta puedes registrarte</Link>
+            </div>
           </Container>
-
           :
           denegado()
-
         }
-
-
         {/* // {usuarioValido && } */}
-
-        <Link to="/register" style={{ display: "flex", textAlign: "center", justifyContent: "center", margin: "5% 0% 5% 0%" }}>Si no tienes una cuenta puedes registrarte</Link>
-      </Container>
+      </section >
     </>
   );
 }
