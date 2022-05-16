@@ -51,7 +51,8 @@
   }
   .contEntry{
     margin:0;
-    background-image: url("https://res.cloudinary.com/docutv7ug/image/upload/v1652710882/entry_ii3vpu.png")
+    background-image: url("https://res.cloudinary.com/docutv7ug/image/upload/v1652710882/entry_ii3vpu.png");
+    background-repeat: no-repeat;
   }
   .imgEntry{
     object-fit: cover;

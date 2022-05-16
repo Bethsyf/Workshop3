@@ -1,4 +1,4 @@
-import { addDoc, collection, getDocs, query } from "firebase/firestore"
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore"
 import { DB } from "../../firebase/FirebaseConfig"
 import { typesProduct } from "../types/typesProduct"
 
@@ -50,4 +50,25 @@ export const listProductSync = (product) => {
     type: typesProduct.list,
     payload: product
   }
+}
+
+//--- Buscar-----//
+export const searchProductAsync = (nombreBuscar) => {
+	return async (dispatch) => {
+		const collectionListar = collection(DB, "ProductsDB")
+		const q2 = query(collectionListar, where('nombre', '>=', nombreBuscar), where('nombre', '<=', nombreBuscar + '~'))
+		const datosQ = await getDocs(q2)
+		console.log(datosQ)
+		const Product = []
+		datosQ.forEach((docu => {
+			Product.push(docu.data())
+		}))
+		dispatch(searchProductSync(Product))
+	}
+}
+export const searchProductSync = (prod) => {
+	return {
+		type: typesProduct.search,
+		payload: prod
+	}
 }

@@ -1,8 +1,8 @@
 import React from "react";
-import { Button, Container, Form, FormControl, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { logoutAsync } from "../redux/actions/actionRegister";
-
+import Search from "./Search";
 const NavbarP = () => {
   const dispatch = useDispatch();
  
@@ -25,17 +25,7 @@ const NavbarP = () => {
               <Nav.Link href="#home" onClick={() => dispatch(logoutAsync())}>Logout</Nav.Link>
 
             </Nav>
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-                name="searched"
-
-              />
-              <Button type="submit" name="searched" variant="outline-success">Search</Button>
-            </Form>
+            <Search />
           </Navbar.Collapse>
         </Container>
       </Navbar>

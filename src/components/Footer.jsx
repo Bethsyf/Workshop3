@@ -1,23 +1,25 @@
-import react from "react";
 import "../styles/generalStyles.css";
+import { useNavigate } from 'react-router-dom';
 
 const FooterP = () => {
+
+  const navigate = useNavigate()
   return (
     <>
-      <footer class="container" style={{marginTop: "20px 0px"}}>
-        <div class="row">
-          <div class="col-5">
-            <button class="Botones-varios"><img src="https://res.cloudinary.com/docutv7ug/image/upload/v1652718870/home_yqhcbk.png" alt="home"/></button>
+      <footer className="container" style={{marginTop: "20px 0px"}}>
+        <div className="row">
+          <div className="col-5">
+            <button className="Botones-varios"><img src="https://res.cloudinary.com/docutv7ug/image/upload/v1652718870/home_yqhcbk.png" onClick={() => navigate("/home")} alt="home"/></button>
           </div>
 
-          <div class="col-2">
-            <button class="Botones-varios"><img src="https://res.cloudinary.com/docutv7ug/image/upload/v1652718870/corazon_m08bq4.png" alt="favorite"/></button>
+          <div className="col-2">
+            <button className="Botones-varios"><img src="https://res.cloudinary.com/docutv7ug/image/upload/v1652718870/corazon_m08bq4.png" onClick={() => navigate("/favorite")} alt="favorite"/></button>
           </div>
-          <div class="col-2">
-            <button class="Botones-varios"><img src="https://res.cloudinary.com/docutv7ug/image/upload/v1652718870/chat_k8ap4t.png" alt="Carrito de compras"/></button>
+          <div className="col-2">
+            <button className="Botones-varios"><img src="https://res.cloudinary.com/docutv7ug/image/upload/v1652718870/chat_k8ap4t.png" onClick={() => navigate("/checkout")} alt="Carrito de compras"/></button>
           </div>
-          <div class="col-2">
-            <button class="Botones-varios"><img src="https://res.cloudinary.com/docutv7ug/image/upload/v1652718870/user_v2vazn.png" alt="profile"/></button>
+          <div className="col-2">
+            <button className="Botones-varios"><img src="https://res.cloudinary.com/docutv7ug/image/upload/v1652718870/user_v2vazn.png" onClick={() => navigate("/profile")} alt="profile"/></button>
           </div>
           
         </div>
