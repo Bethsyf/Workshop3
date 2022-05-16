@@ -1,8 +1,7 @@
 import { createUserWithEmailAndPassword, deleteUser, getAuth, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth"
 import { typeRegistration } from "../types/types.js";
-import { google } from "../../firebase/Firebase.js";
-import { facebook } from "../../firebase/Firebase.js";
 import swal from 'sweetalert';
+import { facebook, google } from "../../firebase/FirebaseConfig.js";
 
 
 export const logoutAsync = () => {
