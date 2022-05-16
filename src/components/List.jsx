@@ -16,8 +16,9 @@ const List = () => {
 
   return (
     <>
-      <Container>
-        <div>
+      <Container className="container">
+        <div className="row">
+        <div className="col">
           {products.map((item, i) => (
             <div key={item.id + i} style={{ marginLeft: "2%" }}>
               <a href="#home" id={item.id}>
@@ -27,13 +28,15 @@ const List = () => {
                     <Card.Title>{item.nombre}</Card.Title>
                     <Card.Text>
                       <img src={item.foto} alt="foto producto"/>
-                      {item.descripcion}
+                      {item.precio}
                     </Card.Text>
                   </Card.Body>
                 </Card>
               </a>
             </div>
+            
           ))}
+        </div>
         </div>
       </Container>
     </>
