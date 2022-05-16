@@ -5,7 +5,9 @@ import Login from "../containers/Login";
 import Register from "../containers/Register";
 import LandingRoutes from "./LandingRoutes";
 import { PrivateRoutes, PublicRoutes } from "./PublicAndPrivateRoutes";
-
+import Logo from "../components/Logo";
+import "../styles/generalStyles.css";
+import Entry from "../containers/Entry";
 
 const AppRoutes = ()=> {
   const [checkIn, setCheckIn]=useState(true)
@@ -26,7 +28,11 @@ const AppRoutes = ()=> {
 
 if(checkIn){
   return(
-      <h1>Espere....</h1>
+      <>
+      <div className="carga">
+          <Logo/>
+      </div>
+      </>
   )
 }
 
@@ -35,6 +41,11 @@ if(checkIn){
       <BrowserRouter>
       
             <Routes>
+            <Route path="/entry" element={
+                <PublicRoutes isAuth={isLoggedIn}>
+                  <Entry/>
+                </PublicRoutes>
+              }/>
               <Route path="/login" element={
                 <PublicRoutes isAuth={isLoggedIn}>
                   <Login/>
