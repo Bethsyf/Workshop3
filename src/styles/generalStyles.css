@@ -81,3 +81,12 @@
   margin-top: 5%;
 }
 
+.contFooter {
+  background-color: white;
+  padding: 10px;
+  bottom: 0;
+}
+.Botones-varios{
+  border: none;
+  background-color: transparent;
+}

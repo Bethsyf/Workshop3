@@ -7,5 +7,5 @@ export const PublicRoutes =({isAuth, children})=> {
 }
 
 export const PrivateRoutes = ({isAuth, children})=>{
-    return (isAuth ? children : <Navigate to ="/login"/>)
+    return (isAuth ? children : <Navigate to ="/entry"/>)
 }
