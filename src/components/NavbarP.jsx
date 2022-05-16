@@ -2,24 +2,25 @@ import React from "react";
 import { Button, Container, Form, FormControl, Nav, Navbar } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { logoutAsync } from "../redux/actions/actionRegister";
-// import { useNavigate } from 'react-router-dom';
-
-
 
 const NavbarP = () => {
-
   const dispatch = useDispatch();
-  //   const navigate = useNavigate();
-
-
-
+ 
   return (
     <>
+<<<<<<< HEAD
+      <Navbar  expand="md" >
+        <Container fluid>
+          <Navbar.Brand href="#">
+            <img src="https://res.cloudinary.com/dmaviub4l/image/upload/v1652716374/vctvywhyh0t6ptxqwffg.png" alt="Logo" style={{ width: "100px" }}/></Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarScroll" style={{ backgroundColor: "white" }} />
+=======
       <Navbar bg="light" variant="light" expand="md" >
         <Container fluid>
           <Navbar.Brand href="#">
             <img src="" alt="Logo" /></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll"/>
+>>>>>>> 1048e90a907eed5c18c7d23f3dc11bffdeb9ef44
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0 navLinks"
@@ -27,6 +28,7 @@ const NavbarP = () => {
               navbarScroll
             >
               <Nav.Link href="/home" >Home</Nav.Link>
+              <Nav.Link href="/add" >Agregar Productos</Nav.Link>
 
               <Nav.Link href="#home" onClick={() => dispatch(logoutAsync())}>Logout</Nav.Link>
 
