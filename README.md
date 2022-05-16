@@ -1,7 +1,6 @@
 # Explicacion Proyecto:
 
-El Proyecto Block-Master se crea como una vista online de peliculas de todos los tiempos.
-Aqui puedes escoger y buscar tu pelicula favorita y ver sus trailers entre otras funcionalidades, aqui podras registrarte y tener tu propio usuario de visita, puedes ver el detalle y editar o agregar mas peliculas, tambien puedes encontrar mas informacion sobre la ubicacion de nuestra tienda, peliculas, datos importantes entre otros. esto hara que mejores asi la User-Experience; el proyecto cuenta con un backend en la plataforma firebase de google cloud.
+El E-commerce de ropa sport para la venta online. esto hara que mejores asi la User-Experience; el proyecto cuenta con un backend en la plataforma firebase de google cloud.
 
 ## Este proyecto fue creado con:
 
@@ -39,7 +38,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 **GitHub**  
 ---
 
-Link to Repository [https://github.com/julianest/Block-master](https://github.com/julianest/Block-master).  
+Link to Repository [https://github.com/Bethsyf/Workshop3](https://github.com/Bethsyf/Workshop3).  
 
 
 ## Backend
