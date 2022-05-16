@@ -1,0 +1,57 @@
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      width: 40%;
+      height: 40%;
+      animation-name: Slidein;
+      animation-duration: 2s;
+      animation-iteration-count: 1;
+      animation-direction:normal;
+      animation-fill-mode: forwards; 
+      animation-delay: 1s; 
+      animation-timing-function: ease-out; 
+      visibility: hidden;  
+      }
+      .containerHidden{
+        animation-name: HiddenItems;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+        visibility: visible;
+        animation-fill-mode:backwards;
+      }
+      
+    }
+    @keyframes HiddenItems{
+      0%{
+            visibility: hidden;
+        }
+      100%{
+        visibility: hidden;
+        }
+    }  
+  @keyframes Slidein{
+    0%{
+      visibility:visible;
+  }
+    50%{
+      
+  }
+    100%{
+      width:40%;
+      height: 40%;
+      transition: 2s;
+      visibility:visible;
+  }
+  }
+
+  .carga{
+    Display: grid;
+  place-items: center;
+  width: 50%;
+  margin-top: 30%;
+  }
+
+  .initCont{
+    background-image: url("https://res.cloudinary.com/docutv7ug/image/upload/v1652710882/entry_ii3vpu.png")
+
+  }
+
