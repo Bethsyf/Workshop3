@@ -49,9 +49,34 @@
   width: 50%;
   margin-top: 30%;
   }
-
-  .initCont{
+  .contEntry{
+    margin:0;
     background-image: url("https://res.cloudinary.com/docutv7ug/image/upload/v1652710882/entry_ii3vpu.png")
-
   }
-
+  .imgEntry{
+    object-fit: cover;
+    z-index: -1;
+    position:relative;
+  }
+  .continitgen{
+    z-index: 2;
+  position:absolute;
+  bottom:-125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%
+  }
+.contenInit{
+  color: white;
+  text-align: start;
+}
+.contBotonesEnt{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 2%;
+}
+.buttonsEntry{
+  margin-top: 5%;
+}
