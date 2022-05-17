@@ -50,7 +50,7 @@ const Login = () => {
       }}>
         {!usuarioValido ?
           <Container>
-            <h1 style={{ 'fontFamily': '', 'fontSize': '44px', 'fontWeight': '700' }}>Style your
+            <h1 className="text-uppercase" style={{ 'fontFamily': '', 'fontSize': '44px', 'fontWeight': '700' }}>Style your
               <span className='d-block'>clothes</span>
             </h1>
             <Form onSubmit={handleSubmit} className='mt-5'>
