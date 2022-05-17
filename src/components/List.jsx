@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import React, { memo, useEffect } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProductAsync } from "../redux/actions/actionProduct";
 import { AiOutlineHeart } from "react-icons/ai";
@@ -47,11 +47,7 @@ const List = () => {
           ))}
         </div>
         
-        </div>
-      </Container>
-      {/* {
-                modal === true ? <Edit datos={datos} setModal={setModal} /> : ''
-            } */}
+      </Container>      
     </>
   );
 }
