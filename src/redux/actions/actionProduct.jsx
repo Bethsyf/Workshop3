@@ -1,4 +1,4 @@
-import { addDoc, collection, getDocs, query, where } from "firebase/firestore"
+import { addDoc, collection, deleteDoc, doc, getDocs, query, where } from "firebase/firestore"
 import { DB } from "../../firebase/FirebaseConfig"
 import { typesProduct } from "../types/typesProduct"
 
@@ -71,4 +71,26 @@ export const searchProductSync = (prod) => {
 		type: typesProduct.search,
 		payload: prod
 	}
+}
+
+export const deletProductAsync = (nombre) => {
+  return async (dispatch) => {
+      const collectionListar = collection(DB, "ProductsDB")
+      const q = query(collectionListar, where('nombre', '==', nombre))
+      const datosQ = await getDocs(q)
+      console.log(datosQ)
+      datosQ.forEach(docu => {
+          deleteDoc(doc(DB, 'ProductsDB', docu.id))
+      })
+      dispatch(deletProductSync(nombre))           
+  }
+
+}
+
+export const deletProductSync = (nombre) => {
+  return {
+      type: typesProduct.delete,
+      payload: nombre
+  }
+
 }

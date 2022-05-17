@@ -9,7 +9,7 @@ const FooterP = () => {
       <footer className="container" style={{marginTop: "20px 0px"}}>
         <div className="row">
           <div className="col-5">
-            <button className="Botones-varios"><img src="https://res.cloudinary.com/docutv7ug/image/upload/v1652718870/home_yqhcbk.png" onClick={() => navigate("/home")} alt="home"/></button>
+            <button className="Botones-varios"><img src="https://res.cloudinary.com/dmaviub4l/image/upload/v1652726593/wjytvkzc6kn5ktq8e7jl.png" onClick={() => navigate("/home")} alt="home"/></button>
           </div>
 
           <div className="col-2">
